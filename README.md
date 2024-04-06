@@ -25,5 +25,6 @@ To see how to call API endpoints, you can refer to https://clouddevs.com/react/a
 
 
 Add New Product
+
 Add UI elements for adding new product by supplying fields product name, price.
 Add buttons to save and cancel the operation.
