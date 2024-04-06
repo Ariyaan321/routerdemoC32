@@ -10,6 +10,7 @@ To see how to call API endpoints, you can refer to https://clouddevs.com/react/a
 
 
 Add New User
+
 Add UI elements for adding new user by supplying fields username, email, phone, password.
 Add buttons to save and cancel the operation.
 
