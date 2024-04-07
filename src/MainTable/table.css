@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    border: 6px solid red;
+    width: 100vw;
+    height: max-content;
+}
+
+.tablecss {
+    margin-top: 10%;
+    border: 5px solid yellow;
+    width: 50vw;
+    height: max-content;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+table {
+    border: 2px solid forestgreen;
+    width: inherit;
+    height: inherit;
+    border-collapse: collapse;
+}
+
+th {
+    border-bottom: 1px solid black;
+}
+
+td,
+tr {
+    text-align: center;
+    border: 2px solid red;
+    padding: 10px;
+}
+
+.addUser {
+    margin-left: 45vw;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.actionbutton button {
+    background-color: blue;
+    width: 50px;
+    margin-left: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.actionbutton {
+    width: 190px;
+}
