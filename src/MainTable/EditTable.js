@@ -6,7 +6,7 @@ import ApiData from "../MyApi/ApiData";
 
 export default function EditTable(vals) {
     console.log('----------------------------');
-    console.log("vals is in Edit Table: ", vals)
+    console.log("vals is in Edit Table: ", vals.vals)
     const [editpop, setEditpop] = useState(true)
 
     const userParam = vals.vals.Username
@@ -33,8 +33,6 @@ export default function EditTable(vals) {
         console.log('==============');
         // setApiResponse(<ApiData meth='put' data={updatedData} />)   // returned value from MyApi component        
         setApiResponse(ApiData("put", updatedData, userParam))
-        console.log('==============');
-
     }
 
     function handleUsername(e) {

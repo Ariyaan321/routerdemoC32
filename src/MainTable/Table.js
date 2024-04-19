@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./table.css";
 import EditTable from "./EditTable";
 import axios from "axios"
-
+import ApiData from "../MyApi/ApiData";
 
 export default function Table() {
     const [editpop, setEditpop] = useState(false);
@@ -49,7 +49,7 @@ export default function Table() {
                                                     setValues(val)
                                                     console.log('----key is:\n', key);
                                                 }}>Edit</button>
-                                                <button>Delete</button>
+                                                <button onClick={() => { alert(ApiData('delete', val, val.Username)) }}>Delete</button>
                                             </td>
                                         </tr>
                                     )

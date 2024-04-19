@@ -28,7 +28,7 @@ export default function ApiData(meth, data, userParam) {
 
         case 'delete':
             console.log('in delete');
-            axios.put(baseUrl + "/" + userParam, data)
+            axios.delete(baseUrl + "/" + userParam, data)
                 .then((res) => (console.log('res data: ', res.data)))
                 .catch((err) => console.log('ERROR: ', err.message))
 
