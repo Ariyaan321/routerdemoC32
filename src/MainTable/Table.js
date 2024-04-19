@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "./table.css";
-import EditTable from "./EditTable";
+import EditTable from "./AddEditTable";
 import axios from "axios"
 import ApiData from "../MyApi/ApiData";
 
@@ -72,7 +72,10 @@ export default function Table() {
                 }
                 {/* For Edit popup */}
 
-                <button className="addUser">Add User</button>
+                <button className="addUser" onClick={() => {
+                    setEditpop(!editpop)
+                    setValues("")
+                }}>Add User</button>
             </div>
         </>
     )

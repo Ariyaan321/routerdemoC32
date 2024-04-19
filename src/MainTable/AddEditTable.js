@@ -4,7 +4,8 @@ import { useState } from "react";
 import ApiData from "../MyApi/ApiData";
 
 
-export default function EditTable(vals) {
+export default function AddEditTable(vals = "") {      // vals == "" for Add User button
+
     console.log('----------------------------');
     console.log("vals is in Edit Table: ", vals.vals)
     const [editpop, setEditpop] = useState(true)
@@ -31,8 +32,9 @@ export default function EditTable(vals) {
         e.preventDefault();
         const updatedData = formToJSON(e.target)
         console.log('==============');
-        // setApiResponse(<ApiData meth='put' data={updatedData} />)   // returned value from MyApi component        
-        setApiResponse(ApiData("put", updatedData, userParam))
+        // setApiResponse(<ApiData meth='put' data={updatedData} />)   // returned value from MyApi component  
+        console.log('------------CONDITION------------: ', vals);
+        vals.vals === "" ? setApiResponse(ApiData("post", updatedData)) : setApiResponse(ApiData("put", updatedData, userParam))
     }
 
     function handleUsername(e) {

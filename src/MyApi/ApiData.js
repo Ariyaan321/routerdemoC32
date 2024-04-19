@@ -1,6 +1,6 @@
 import axios from "axios"
 
-export default function ApiData(meth, data, userParam) {
+export default function ApiData(meth, data, userParam = "") {
 
     console.log('in ApiData');
     console.log('meth is: ', meth);
