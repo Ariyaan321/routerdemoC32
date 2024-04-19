@@ -1,13 +1,4 @@
 .editformdiv {
-    /* position: absolute; */
-    /* width: 22vw; */
-    /* width: 50vw;
-    height: max-content;
-    border: 4px solid burlywood;
-    display: flex;
-    justify-content: center;
-    bottom: 40%; */
-
     position: fixed;
     top: 0;
     left: 0;

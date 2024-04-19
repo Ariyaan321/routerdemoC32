@@ -2,8 +2,8 @@ body {
     display: flex;
     justify-content: center;
     border: 6px solid red;
-    width: 100vw;
-    height: max-content;
+    width: 98.9vw;
+    height: 100vh;
 }
 
 .tablecss {
