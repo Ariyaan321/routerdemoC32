@@ -1,5 +1,5 @@
 import React from "react"
-import "./EditTable.css"
+import "./AddEditTable.css"
 import { useState } from "react";
 import ApiData from "../MyApi/ApiData";
 
