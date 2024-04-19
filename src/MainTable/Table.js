@@ -47,9 +47,11 @@ export default function Table() {
                                                 <button onClick={() => {
                                                     setEditpop(!editpop)
                                                     setValues(val)
-                                                    console.log('----key is:\n', key);
                                                 }}>Edit</button>
-                                                <button onClick={() => { alert(ApiData('delete', val, val.Username)) }}>Delete</button>
+                                                <button onClick={async () => {
+                                                    const res = await ApiData('delete', val, val.Username)
+                                                    alert(res)
+                                                }}>Delete</button>
                                             </td>
                                         </tr>
                                     )

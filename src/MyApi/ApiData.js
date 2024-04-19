@@ -1,21 +1,20 @@
 import axios from "axios"
 
-export default function ApiData(meth, data, userParam = "") {
-
-    console.log('in ApiData');
-    console.log('meth is: ', meth);
-    console.log('data is: ', data);
+export default async function ApiData(meth, data, userParam = "") {
 
     const baseUrl = "http://localhost:8080/users"
 
     switch (meth) {
         case 'post':
-            console.log('in post');
-            axios.post(baseUrl, data)
-                .then((res) => (console.log('res data: ', res.data)))
-                .catch((err) => console.log('ERROR: ', err.message))
+            try {
+                const reso = await axios.post(baseUrl, data);
+                const message = reso.data.message !== undefined ? "User alredy exists" : "User added successfully";
+                return message;
 
-            return "User added successfully"
+            }
+            catch (err) {
+                return "Some error occured";
+            }
 
         case 'put':
             console.log('in put');
@@ -28,19 +27,20 @@ export default function ApiData(meth, data, userParam = "") {
 
         case 'delete':
             console.log('in delete');
-            axios.delete(baseUrl + "/" + userParam, data)
-                .then((res) => (console.log('res data: ', res.data)))
-                .catch((err) => console.log('ERROR: ', err.message))
+            try {
+                await axios.delete(baseUrl + "/" + userParam, data)
+                    .then((res) => (console.log('res data: ', res.data)))
+                    .catch((err) => console.log('ERROR: ', err.message))
 
-            return "User deleted successfully"
+                return "User deleted successfully"
+            }
+            catch (err) {
+                return err.message
+            }
 
         default:
             break;
     }
 
-
-
     return "Some Error Occurred"
-
-
 }
