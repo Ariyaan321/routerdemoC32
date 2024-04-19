@@ -4,35 +4,6 @@ import "./table.css";
 import EditTable from "./EditTable";
 import axios from "axios"
 
-const datas = [
-    {
-        "Username": "Aa",
-        "Email": "Aa@gmail.com",
-        "Phone": "123456",
-    },
-    {
-        "Username": "Bb",
-        "Email": "Bb@gmail.com",
-        "Phone": "9994396",
-    },
-    {
-        "Username": "Bb",
-        "Email": "Bb@gmail.com",
-        "Phone": "9994396",
-    },
-    {
-        "Username": "Bb",
-        "Email": "Bb@gmail.com",
-        "Phone": "9994396",
-    },
-    {
-        "Username": "Bb",
-        "Email": "Bb@gmail.com",
-        "Phone": "9994396",
-    }
-
-]
-
 
 export default function Table() {
     const [editpop, setEditpop] = useState(false);
